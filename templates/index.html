@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hand Sign Language Detection</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="static\images\favicon.jpg" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Hand Sign Language Detection</h1>
+      <nav>
+        <button onclick="location.href='#home'">Home</button>
+        <button onclick="location.href='#about'">About</button>
+        <button onclick="location.href='#examples'">Images</button>
+        <button onclick="location.href='#contact'">Contact</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Image section -->
+    <section id="image-section" class="image-section">
+      <img src="static\images\image.jpg" alt="Description of image">
+    </section>
+
+    <section id="home" class="hero">
+      <h2>Welcome to the Sign Language Detection Website</h2>
+      <p>Detect hand signs in real-time using your webcam and learn sign language!</p>
+    </section>
+    <section id="video-section">
+      <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" id="video-feed" alt="Video Feed">
+      </div>
+      <div class="output-container">
+        <h2>Prediction Output:</h2>
+        <p id="prediction-output">Waiting for input...</p>
+      </div>
+    </section>
+    <section id="examples">
+      <h2>Sign Language Images</h2>
+      <div class="image-gallery">
+        <img src="static/images/SignA.jpg" alt="Sign A">
+        <img src="static/images/SignB.jpg" alt="Sign B">
+        <img src="static/images/SignC.jpg" alt="Sign C">
+        <img src="static/images/SignD.jpg" alt="Sign D">
+      </div>
+    </section>
+    <section id="about">
+      <h2>About It</h2>
+      <p>Sign language detection utilizes computer vision and machine learning techniques to interpret hand gestures. It aims to facilitate communication between hearing and hearing-impaired individuals by translating sign language into text or speech.
+        The ASL alphabet plays a crucial role in developing sign language detection systems. These systems use computer vision and machine learning techniques to recognize and interpret the hand signs, facilitating communication between hearing and hearing-impaired individuals. By training models on images and videos of these hand signs, researchers can create robust sign language recognition systems capable of real-time translation and interaction.
+      </p>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Have questions or feedback? Reach out to us at <a href="mailto:sarohaaanya2@gmail.com">sarohaaanya2@gmail.com</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Hand Sign Language Detection by Aanya Saroha. All rights reserved.</p>
+  </footer>
+  <script>
+    const videoFeed = document.getElementById('video-feed');
+    const predictionOutput = document.getElementById('prediction-output');
+
+    function updatePrediction() {
+      setInterval(() => {
+        fetch('/prediction')
+          .then(response => response.json())
+          .then(data => {
+            predictionOutput.textContent = data;
+          })
+          .catch(error => console.error('Error fetching prediction:', error));
+      }, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', updatePrediction);
+  </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+header {
+  background: #4a0072;
+  padding: 1.5rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for header content */
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav button {
+  background-color: #fff;
+  color: #4a0072;
+  border: 2px solid #4a0072;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav button:hover {
+  background-color: #4a0072;
+  color: #fff;
+}
+
+/* New styles for the image section */
+#image-section {
+  text-align: center;
+  padding: 1rem;
+}
+
+#image-section img {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #4a0072, #000);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.video-container {
+  width: 640px;
+  height: 480px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #4a0072;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#video-feed {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.output-container {
+  text-align: center;
+  padding: 1rem;
+  background: #4a0072;
+  border-radius: 10px;
+}
+
+.output-container h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.output-container p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#examples {
+  padding: 2rem;
+  text-align: center;
+}
+
+#examples h2 {
+  color: #4a0072;
+  margin-bottom: 1rem;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.image-gallery img {
+  width: 200px;
+  height: auto;
+  border: 5px solid #4a0072;
+  border-radius: 10px;
+}
+
+#about, #contact {
+  padding: 2rem;
+  background: #4a0072;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+#about h2, #contact h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+}
+
+#about p, #contact p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+}
+
+#contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer {
+  background: #4a0072;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* Styles for header */
+header {
+    background: #4a0072;
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for header content */
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav button {
+    background-color: #fff;
+    color: #4a0072;
+    border: 2px solid #4a0072;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav button:hover {
+    background-color: #4a0072;
+    color: #fff;
+}
+
+/* Styles for the image section */
+#image-section {
+    padding: 2rem;
+}
+
+#image-section img {
+    display: block;
+    width: 180vw;
+    height: 40vh;
+    object-fit: cover; /* Cover the viewport while maintaining aspect ratio */
+    margin-top: 1rem; /* Space between the header and the image */
+}
+
+/* Styles for the hero section */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #4a0072, #000);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.video-container {
+    width: 640px;
+    height: 480px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #4a0072;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#video-feed {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.output-container {
+    text-align: center;
+    padding: 1rem;
+    background: #4a0072;
+    border-radius: 10px;
+}
+
+.output-container h2 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.output-container p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#examples {
+    padding: 2rem;
+    text-align: center;
+}
+
+#examples h2 {
+    color: #4a0072;
+    margin-bottom: 1rem;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: auto;
+    border: 5px solid #4a0072;
+    border-radius: 10px;
+}
+
+#about, #contact {
+    padding: 2rem;
+    background: #4a0072;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+#about h2, #contact h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: center;
+}
+
+#about p, #contact p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+}
+
+#contact a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer {
+    background: #4a0072;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    margin-top: auto;
+}
+
+  margin-top: auto;
+}
